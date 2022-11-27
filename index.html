@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ===== CSS ===== -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://www.freepnglogos.com/uploads/among-us-png/light-green-among-us-character-wallpaper-5.png" type="image/icon type">
+    <!-- ===== Boxicons Icons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <title>Portfolio dyali</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-bar">
+            <i class='bx bx-menu sidebarOpen' ></i>
+            <span class="logo navLogo"><a href="#">Antigone <small>(Portfolio)</small></a></span>
+
+            <div class="menu">
+                <div class="logo-toggle">
+                    <span class="logo"><a href="#">Antigone</a></span>
+                    <i class='bx bx-x siderbarClose'></i>
+                </div>
+
+                <ul class="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#About">About</a></li>
+                    <li><a href="#Experience">My Experience</a></li>
+                    <li><a href="#Project">Projects</a></li>
+                    <li><a href="#Contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="darkLight-searchBox">
+                <div class="dark-light">
+                    <i class='bx bx-moon moon'></i>
+                    <i class='bx bx-sun sun'></i>
+                </div>
+
+                <div class="searchBox">
+                    <div class="searchToggle">
+                        <i class='bx bx-x cancel'></i>
+                        <i class='bx bx-search search'></i>
+                    </div>
+
+                    <div class="search-field">
+                        <input type="text" placeholder="Search...">
+                        <i class='bx bx-search'></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <script defer src="script.js"></script>
+    <section class="First-section">
+        <div>
+            <img src="data:image/jpeg;base64,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" alt="">
+            <div class="info-cont">
+                <span class="fullname">Yassine Adiouani</span>
+                <span>Frontend / Backend <br>Developer</span>
+            </div>
+            <ul>
+                <li><a target="_blank" href="https://github.com/YassineAdiouani"><i class='bx bxl-github'></i></a></li>
+                <li><a target="_blank" href="https://discord.gg/RjBsYEmWWq"><i class='bx bxl-discord-alt' ></i></a></li>
+                <li><a target="_blank" href="https://www.linkedin.com/in/yassinediwani444/"><i class='bx bxl-linkedin-square'></i></a></li>
+            </ul>
+            <div class="down">
+                <button><a download="" href="./P.txt">Download CV</a>  </button>
+                
+            </div>
+        </div>
+    </section>
+    
+    <!----------------------->
+    <div class="goUP"><i class='bx bxs-up-arrow'></i></div>
+    <!----------------------->
+    <!-----------About Section------------>
+    <hr>
+    <section class="Second-Section" id="About">
+        <div class="About">
+            <span>My intro</span><br>
+            <span class="fullname">About Me</span>
+        </div>
+        <article>
+            <div class="Info-About">
+                <div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus similique architecto nemo, quidem soluta expedita, sapiente beatae iure ab tenetur, impedit eius nobis? Ex corporis vero voluptas possimus eaque corrupti?</p>
+                    <button>Contact me</button>
+                </div>
+                <img src="https://itcs.co.in/img/learn-web-designing.gif" width="40%" alt="gif-About">
+            </div>
+            <div class="Info-Exp">
+                <div>
+                    <span class="About-title">Information</span>
+                    <ul>
+                        <li>
+                            <i class='bx bx-user' ></i>
+                            <span class="li1">Yassine Adiouani</span>
+                        </li>
+                        <li>
+                            <i class='bx bx-phone' ></i>
+                            <span class="li1">+212-693533659</span>
+                        </li>
+                        <li>
+                            <i class='bx bx-envelope' ></i>
+                            <span class="li1">yassinediwani444@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <span class="About-title">Experience and support</span>
+                    <ul>
+                        <li class="li-Expre">
+                            <i class='bx bx-medal' ></i>
+                            <div class="contect-Abo">
+                                <b>2 Years Job</b>
+                                <span>Experience</span>
+                            </div>
+                        </li>
+                        <li class="li-Expre">
+                            <i class='bx bx-briefcase'></i>
+                            <div class="contect-Abo">
+                                <b>6+ Projects</b>
+                                <span>Completed</span>
+                            </div>
+                        </li>
+                        <li class="li-Expre">
+                            <i class='bx bx-support' ></i>
+                            <div class="contect-Abo">
+                                <b>Support</b>
+                                <span>Online 24/7</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+    </section>
+    <!-----------Experience Section------------>
+    <hr>
+    <section class="Experience-Section" id="Experience">
+        <div class="About Experience">
+            <span>Why Choose Me</span><br>
+            <span class="fullname">Me expertise Area</span>
+        </div>
+        <div class="Exper-Container">
+            <div>
+                <h3><i class='bx bx-code-block'></i> <span>Frontend</span></h3>
+                <ul>
+                    <li>
+                        <div class="Ex-name">
+                            <span>HTML&CSS</span>
+                            <span>88%</span>
+                        </div>
+                        <div class="bar-block">
+                            <span class="Expre-width" style="width: 0;" data-width="88%"></span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="Ex-name">
+                            <span>JAVASCRIPT</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="bar-block">
+                            <span class="Expre-width" style="width: 0;" data-width="90%"></span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="Ex-name">
+                            <span>REACT</span>
+                            <span>50%</span>
+                        </div>
+                        <div class="bar-block">
+                            <span class="Expre-width" style="width: 0;" data-width="50%"></span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h3><i class='bx bx-git-pull-request'></i><span>Backend</span></h3>
+                <ul>
+                    <li>
+                        <div class="Ex-name">
+                            <span>PHP</span>
+                            <span>45%</span>
+                        </div>
+                        <div class="bar-block">
+                            <span class="Expre-width" style="width: 0;" data-width="45%"></span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="Ex-name">
+                            <span>PYTHON</span>
+                            <span>30%</span>
+                        </div>
+                        <div class="bar-block">
+                            <span class="Expre-width" style="width: 0;" data-width="30%"></span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="Ex-name">
+                            <span>MYSQL</span>
+                            <span>60%</span>
+                        </div>
+                        <div class="bar-block">
+                            <span class="Expre-width" style="width: 0;" data-width="60%"></span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!---------My works Section----------->
+    <hr>
+    <section class="Projects-Section" id="Project">
+        <div class="About Projects">
+            <span>My Portfolio</span><br>
+            <span class="fullname">Recent Works</span>
+        </div>
+        <div class="sliide-container owl-carousel">
+            <div class="project-block">
+                <img class="img-project" src="https://mir-s3-cdn-cf.behance.net/projects/404/dc78fb101939605.Y3JvcCwzNTQ0LDI3NzIsMCw0MjE.jpg" alt="">
+                <div class="hidir">
+                    <div>
+                        <a class="fullname" href="#">Myflix</a>
+                        <span>work 1</span>
+                    </div>
+                    <button><a href="https://myflix-2022.netlify.app/index.html" target="_blank">Check</a></button>
+                </div>
+            </div>
+            <div class="project-block">
+                <img class="img-project" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjYNqVYAA_a0YSjRYoDRrPzOlTGSs1y_DVwR2MfnopLpIBl71hgP61q4r3ou_d5WOLDlRsWzCiUvdAWeFn3ZsRRdARbWESXBjC6oJj2cyOSSoewUvDkOf59nqcbNBZT9CAra_luoOdZ5-9xtCJl69kDVds5Lq8p-FltmyvW_wmD4TGWjtaE6ZZ49WT65Q/w640-h360/Random%20Password%20Generator%20in%20HTML%20CSS%20&%20JavaScript.png" alt="">
+                <div class="hidir">
+                    <div>
+                        <a class="fullname" href="#">Password Generator</a>
+                        <span>work 2</span>
+                    </div>
+                    <button><a href="https://yassineadiouani.github.io/Password-Generator/" target="_blank">Check</a></button>
+                </div>
+            </div>
+            <div class="project-block">
+                <img class="img-project" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhbMmmmgahDiWuQaUm1QQJoivGw-mZah4DrDb-EFNsIKycj42Qno1YoRm-GX7Ag1WJs4MSFruD7ERDEDkyV-EXVCQIpF2nCn60cwiXBYLQ8T9qEYzgBm1y0yx06fm4iaCDQdQfT_sCjGAH29GvxuWjNg7My2Vf_N4V_Zfe6GXwkf8lOGI60zm6PYAFSng/w640-h360/Comming%20soon%20page%20light.png" alt="">
+                <div class="hidir">
+                    <div>
+                        <a class="fullname" href="#">Coming Soon Page</a>
+                        <span>work 3</span>
+                    </div>
+                    <button><a href="https://yassineadiouani.github.io/Website-Coming-Soon-Page/" target="_blank">Check</a></button>
+                </div>
+            </div>
+            <div class="project-block">
+                <img class="img-project" src="data:image/png;base64,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" alt="">
+                <div class="hidir">
+                    <div>
+                        <a class="fullname" href="#">Twitter</a>
+                        <span>work 4</span>
+                    </div>
+                    <button disabled><a href="#" target="_blank">Check</a></button>
+                </div>
+            </div>
+        </div>
+        <script>
+            // Projects Section
+            
+            $(".sliide-container").owlCarousel({
+                margin : 10,
+                loop : true,
+                autoplay:true,
+                autoplayTimeout: 2000,
+                autoplayHoverPause: true,
+                responsive: {
+                    0:{
+                        items: 1,
+                        nav: false
+                    },
+                    600:{
+                        items: 2,
+                        nav:false
+                    },
+                    1000:{
+                        items: 3,
+                        nav: false
+                    }
+                }
+            })
+        </script>
+    </section>
+    <!----------------Contact Section------------->
+    <hr>
+    <section class="Contact-Section" id="Contact">
+        <div class="About Contact">
+            <span>For Projects</span><br>
+            <span class="fullname">Contact me</span>
+        </div>
+        <div class="Contact-contai">
+            <div class="Social-md">
+                <div>
+                    <i class='bx bxl-twitter'></i>
+                    <b>Twitter</b>
+                    <small>@DiwaniYassine</small>
+                    <a target="_blank" href="https://twitter.com/DiwaniYassine">open<i class='bx bx-link-external' ></i></a>
+
+                </div>
+                <div>
+                    <i class='bx bxl-whatsapp' ></i>
+                    <b>WhatsApp</b>
+                    <small>+212 693533659</small>
+                    <a target="_blank" href="https://api.whatsapp.com/send/?phone=212693533659&text&type=phone_number&app_absent=0">open<i class='bx bx-link-external' ></i></a>
+                </div>
+                <div>
+                    <i class='bx bxl-messenger' ></i>
+                    <b>Messanger</b>
+                    <small>yassine ido</small>
+                    <a target="_blank" href="http://m.me/yassine.ido.7/">open <i class='bx bx-link-external' ></i></a>
+                </div>
+            </div>
+            <div class="input-block">
+                <div>
+                    <h3>Write me your project</h3>
+                    <small>If you have any work from me or anything for me ,you can send me message from here. <br> it's me pleasure to work with you</small>
+                </div>
+                <div class="form">
+                    <div class="user-input">
+                        <input type="text" placeholder="Name">
+                        <input type="text" placeholder="Email">
+                    </div>
+                    <input type="text" placeholder="Projet Name">
+                    <textarea placeholder="Message Here"></textarea>
+                    <button>Send now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!------------FOOTER--------->
+    <Footer class="A5iran-Section">
+        <h2>Antigone</h2>
+        <div>
+            <img src="data:image/jpeg;base64,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" alt="">
+            <span>Yassine Adiouani</span>
+        </div>
+        <ul>
+            <li>
+                <a target="_blank" href="https://t.me/yassinediwani"><i class='bx bxl-telegram' ></i></a>
+                <a target="_blank" href="https://www.instagram.com/yassine_diwani44/"><i class='bx bxl-instagram' ></i></a>
+                <a target="_blank" href="https://www.reddit.com/u/yassinediwani?utm_medium=android_app&utm_source=share"><i class='bx bxl-reddit' ></i></a>
+                <a target="_blank" href="https://api.whatsapp.com/send/?phone=212693533659&text&type=phone_number&app_absent=0"><i class='bx bxl-whatsapp' ></i></a>
+                <a target="_blank" href="https://twitter.com/DiwaniYassine"><i class='bx bxl-twitter' ></i></a>
+                <a target="_blank" href="tiktok.com/@yassine_diwani"><i class='bx bxl-tiktok' ></i></a>
+                <a target="_blank" href="https://www.linkedin.com/in/yassinediwani444/"><i class='bx bxl-linkedin-square' ></i></a>
+                <a target="_blank" href="https://github.com/YassineAdiouani"><i class='bx bxl-github' ></i></a>
+                <a target="_blank" href="http://m.me/yassine.ido.7/"><i class='bx bxl-messenger' ></i></a>
+                <a target="_blank" href="https://discord.gg/RjBsYEmWWq"><i class='bx bxl-discord-alt' ></i></a>
+            </li>
+        </ul>
+    </Footer>
+</body>
+</html>
