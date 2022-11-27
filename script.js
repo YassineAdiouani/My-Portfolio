@@ -36,19 +36,23 @@ body.addEventListener("click" , e =>{
 });
 
 // Experience Section 
-
+const goUp = document.querySelector('.goUP');
 const sectionScrol = document.querySelector('.Experience-Section');
 const spanScrol = document.querySelectorAll('.Expre-width');
 
-window.onscroll = ()=>{
-  if(window.scrollY >= sectionScrol.offsetTop - 350){
-    spanScrol.forEach(span => {
-      span.style.width = span.dataset.width;
-    });
-    document.querySelector('.goUP').classList.add('ifActive');
-  }else{
-    document.querySelector('.goUP').classList.remove('ifActive');
+  goUp.onclick = ()=>{
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
-};
+
+  window.onscroll = ()=>{
+    if(window.scrollY >= sectionScrol.offsetTop - 350){
+      spanScrol.forEach(span => {
+        span.style.width = span.dataset.width;
+      });
+      goUp.classList.add('ifActive');
+    }else{
+      goUp.classList.remove('ifActive');
+    }
+  };
 
 
