@@ -60,7 +60,10 @@ const spanScrol = document.querySelectorAll('.Expre-width');
   document.querySelector('.EmailButton').onclick= e => {
     e.preventDefault()
     const {name , Emaill , Projet , Message} = document.forms[0]
-    if(!name.value || !Emaill.value || !Projet.value || !Message.value) alert('Tous les champs obligatoire!!')
+    if(!name.value || !Emaill.value || !Projet.value || !Message.value){
+      notify("info",'Tous les champs obligatoire!!');
+      return
+    }
     Email.send({
         SecureToken : "b141bddc-2a1c-4026-ab6b-e67fe90f4ccb",
         To : 'yassinediwani444@gmail.com',
@@ -68,6 +71,30 @@ const spanScrol = document.querySelectorAll('.Expre-width');
         Subject : Projet.value,
         Body : Message.value
     }).then(
-    message => alert("Message send")
+    () => notify("success",'message envoyer !!')
     );
+}
+
+// Notification script
+
+  function notify(type,message){
+      let n = document.createElement("div");
+      let id = Math.random().toFixed(3);
+      n.setAttribute("id",id)
+      n.innerText = message
+      n.classList.add("notification",type);
+      document.getElementById('notification-area').appendChild(n);
+      setTimeout(()=>{
+        let notification = document.getElementById('notification-area').getElementsByClassName('notification');
+        for(let i =0 ; i<notification.length;i++){
+          if(notification[i].getAttribute("id") == id){
+            notification[i].remove();
+            break
+          }
+        }
+      },3000)
+  }
+
+document.querySelector('.cvTelecharger').onclick = () => {
+  notify('success','PDF will install knew')
 }
