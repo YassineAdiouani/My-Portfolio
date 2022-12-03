@@ -55,4 +55,19 @@ const spanScrol = document.querySelectorAll('.Expre-width');
     }
   };
 
+// Contact send to Email
 
+  document.querySelector('.EmailButton').onclick= e => {
+    e.preventDefault()
+    const {name , Emaill , Projet , Message} = document.forms[0]
+    if(!name.value || !Emaill.value || !Projet.value || !Message.value) alert('Tous les champs obligatoire!!')
+    Email.send({
+        SecureToken : "b141bddc-2a1c-4026-ab6b-e67fe90f4ccb",
+        To : 'yassinediwani444@gmail.com',
+        From : 'yassinediwani444@gmail.com',
+        Subject : Projet.value,
+        Body : Message.value
+    }).then(
+    message => alert("Message send")
+    );
+}
