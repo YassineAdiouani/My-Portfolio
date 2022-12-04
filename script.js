@@ -98,3 +98,44 @@ const spanScrol = document.querySelectorAll('.Expre-width');
 document.querySelector('.cvTelecharger').onclick = () => {
   notify('success','PDF installed')
 }
+
+// Add Leave-message script
+const RemoveId = Status => {
+  if(Status){
+    LeaveMessage.setAttribute('id',"Show");
+    return
+  }
+  LeaveMessage.removeAttribute('id');
+}
+
+const btnMessageMe = document.querySelector('#Contact-me'),
+      LeaveMessage = document.querySelector('.Leave-Message'),
+      CancelButton = document.querySelector('.Cancel'),
+      closeButton = document.querySelector('.closex'),
+      sendMessage = document.querySelector('.send-Leave-Message'),
+      textarea = document.querySelector('.TextMessage'),
+      Ask = document.querySelector('.Ask');
+
+btnMessageMe.addEventListener('click',()=>RemoveId(true));
+CancelButton.addEventListener('click',()=>RemoveId(false));
+closeButton.addEventListener('click',()=>RemoveId(false));
+Ask.addEventListener('click',()=>RemoveId(true));
+sendMessage.addEventListener('click',()=>{
+  if(!textarea.value){
+    notify("info",'Write something first !!');
+    CancelButton.click()
+    return
+  }
+  Email.send({
+      SecureToken : "b141bddc-2a1c-4026-ab6b-e67fe90f4ccb",
+      To : 'yassinediwani444@gmail.com',
+      From : 'yassinediwani444@gmail.com',
+      Subject : "Comment from dak site dyalk",
+      Body : textarea.value
+  }).then(
+  () => {
+    notify("success",'message envoyer !!')
+    CancelButton.click()
+  }
+  );
+})

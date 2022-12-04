@@ -65,7 +65,7 @@ nav{
     height: 70px;
     width: 100%;
     background-color: var(--nav-color);
-    z-index: 100;
+    z-index: 9999999100;
 }
 
 body.dark nav{
@@ -140,6 +140,7 @@ nav .nav-bar .logo a{
     color: var(--text-color);
     text-decoration: none;
     padding: 10px;
+    cursor: pointer;
 }
 
 .nav-links li a::before{
@@ -163,6 +164,9 @@ nav .nav-bar .logo a{
 .nav-bar .darkLight-searchBox{
     display: flex;
     align-items: center;
+}
+.ContaiKolxi{
+    position: relative;
 }
 small{
     font-size: 8px;
@@ -288,7 +292,6 @@ body.dark .search-field i{
     nav .nav-bar .sidebarOpen{
         display: block;
     }
-
     .menu{
         position: fixed;
         height: 100%;
@@ -375,6 +378,19 @@ body.dark .search-field i{
     .Contact-Section .input-block{
         margin: 25px;
     }
+    /*Leave-Message*/
+    #imgContainer{
+        width: 350px;
+        padding: 25px;
+    }
+    #imgContainer .profile-message img{
+        border-radius: 50%;
+        width: 70px;
+    }
+    #imgContainer.profile-message .Leave-Op{
+        margin-left: 11px;
+        font-size: 15px;
+    }
 }
 
 /* First Section */
@@ -428,7 +444,8 @@ body.dark .search-field i{
 }
 .First-section .down button,
 .Second-Section .Info-About div button,
-.Contact-Section .input-block button{
+.Contact-Section .input-block button,
+.msg-container .Leave-Buttons button{
     padding: 12px 15px;
     border: none;
     outline: none;
@@ -443,7 +460,8 @@ body.dark .search-field i{
 }
 .First-section:hover button,
 .Second-Section .Info-About div button:hover,
-.Contact-Section .input-block button:hover{
+.Contact-Section .input-block button:hover,
+.msg-container .Leave-Buttons button:hover{
     background-color: var(--hover);
 }
 hr{
@@ -754,10 +772,12 @@ hr{
 .Contact-Section .input-block .form .user-input{
     display: flex;
 }
-.Contact-Section .input-block textarea{
+.Contact-Section .input-block textarea,
+.msg-container textarea{
     min-height: 200px;
 }
 .Contact-Section .input-block input,
+.msg-container textarea,
 .Contact-Section .input-block textarea{
     height: 50px;
     width: 100%;    
@@ -772,6 +792,11 @@ hr{
 
 .Contact-Section .input-block button{
     padding: 10px 12px;
+}
+.Contact-Section .input-block a{
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--origin);
 }
 /*A5iran-Section*/
 .A5iran-Section{
@@ -861,4 +886,93 @@ hr{
 }
 #notification-area .notification.info{
     background-color: #ffba00;
+}
+/*----------Mini Section for Leave-Message-------------*/
+.Leave-Message{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,.9);
+    top: 0;
+    left: 0;
+    z-index: 999999;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(1.2);
+    transition: opacity .2s 0s ease-in-out,
+                transform .2 0s ease-in-out;
+}
+#Show{
+    transform: scale(1);
+    opacity: 1;
+    pointer-events: all;
+}
+.Leave-Message .msg-container{
+    width: 100%;
+    max-width: 500px;
+    padding: 40px 35px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    transform: translate(-50%,-50%);
+    background-color: var(--card);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+    gap: 15px;
+}
+.msg-container .profile-message{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    color: #000;
+    position: relative;
+}
+.msg-container .profile-message img{
+    border-radius: 50%;
+    width: 80px;
+}
+.msg-container .profile-message .Leave-Op{
+    line-height: 28px;
+    margin-left: 15px;
+    font-size: 21px;
+    color: var(--color);
+}
+.msg-container textarea{
+    background: #e5e5e5;
+    border: #ddd;
+}
+.msg-container .profile-message .Leave-name{
+    font-size: 17px;
+    font-weight: normal;
+    color: var(--small);
+}
+.msg-container .Leave-Buttons{
+    text-align: right;
+}
+.msg-container .Leave-Buttons button{
+    margin: 0 0px 0px 8px;
+    padding: 8px 15px; 
+    font-weight: normal;
+}
+.msg-container .Leave-Buttons button.Cancel{
+    background-color: #f082ac;
+}
+.msg-container .Leave-Buttons button.Cancel:hover{
+    background-color: #ec5f95;
+}
+.msg-container .icon-close{
+    position: absolute;
+    top: 12px;
+    right: 15px;
+}
+.msg-container .icon-close .closex{
+    font-size: 28px;
+    cursor: pointer;
+    color: #666;
+    transition: .1s;
+}
+.msg-container .icon-close .closex:hover{
+    color: #999;
 }
