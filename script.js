@@ -114,12 +114,12 @@ const btnMessageMe = document.querySelector('#Contact-me'),
       closeButton = document.querySelector('.closex'),
       sendMessage = document.querySelector('.send-Leave-Message'),
       textarea = document.querySelector('.TextMessage'),
-      Ask = document.querySelector('.Ask');
+      Ask = document.querySelectorAll('.Ask');
 
-btnMessageMe.addEventListener('click',()=>RemoveId(true));
-CancelButton.addEventListener('click',()=>RemoveId(false));
-closeButton.addEventListener('click',()=>RemoveId(false));
-Ask.addEventListener('click',()=>RemoveId(true));
+btnMessageMe.addEventListener('click',()=>{RemoveId(true);textarea.value = ""});
+CancelButton.addEventListener('click',()=>{RemoveId(false);textarea.value = ""});
+closeButton.addEventListener('click',()=>{RemoveId(false);textarea.value = ""});
+Ask.forEach(one => one.addEventListener('click',()=>RemoveId(true)));
 sendMessage.addEventListener('click',()=>{
   if(!textarea.value){
     notify("info",'Write something first !!');
@@ -134,8 +134,9 @@ sendMessage.addEventListener('click',()=>{
       Body : textarea.value
   }).then(
   () => {
-    notify("success",'message envoyer !!')
-    CancelButton.click()
+    notify("success",'message envoyer !!');
+    textarea.value = "";
+    CancelButton.click();
   }
   );
 })
