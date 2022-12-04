@@ -61,7 +61,7 @@ const spanScrol = document.querySelectorAll('.Expre-width');
     e.preventDefault()
     const {name , Emaill , Projet , Message} = document.forms[0]
     if(!name.value || !Emaill.value || !Projet.value || !Message.value){
-      notify("info",'Tous les champs obligatoire!!');
+      notify("info",'tous les champ sont obligatoire !!');
       return
     }
     Email.send({
@@ -96,5 +96,5 @@ const spanScrol = document.querySelectorAll('.Expre-width');
   }
 
 document.querySelector('.cvTelecharger').onclick = () => {
-  notify('success','PDF will install knew')
+  notify('success','PDF installed')
 }
