@@ -861,7 +861,8 @@ hr{
     pointer-events: none;
 }
 #notification-area .notification{
-    padding: 15px 20px;
+    margin-bottom: 15px;
+    padding: 15px 40px;
     background: #111;
     color: #f5f5f5;
     font-size: 14px;
@@ -975,4 +976,10 @@ hr{
 }
 .msg-container .icon-close .closex:hover{
     color: #999;
+}
+/*------------------------------------------------*/
+button.Not_working{
+    opacity: .7;
+    cursor: not-allowed;
+    pointer-events: none;
 }

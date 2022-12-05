@@ -134,7 +134,7 @@ sendMessage.addEventListener('click',()=>{
       Body : textarea.value
   }).then(
   () => {
-    notify("success",'message envoyer !!');
+    notify("success",'Thank you for feedback!!');
     textarea.value = "";
     CancelButton.click();
   }
