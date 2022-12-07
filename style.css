@@ -504,8 +504,20 @@ hr{
     width: 90%;
     font-weight: 500;
 }
+.Second-Section .Info-About p small{
+    font-size: 15px;
+}
+.Second-Section .Info-About p small a{
+    text-decoration: none;
+    color: var(--origin);
+    cursor: pointer;
+}
 .Second-Section .Info-About button{
     margin-bottom: 30px;
+}
+.Second-Section .Info-About button a{
+    text-decoration: none;
+    color: var(--color);
 }
 .Second-Section .Info-Exp{
     flex: 1;
