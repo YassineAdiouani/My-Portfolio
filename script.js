@@ -140,3 +140,9 @@ sendMessage.addEventListener('click',()=>{
   }
   );
 })
+// twitter Not working Notification
+console.log();
+document.querySelector('.Not_working').onclick = () => {
+  console.log("works");
+  notify("info",'Have some issues in this works !!');
+}
